@@ -18,24 +18,24 @@ end
 options = {
   'port' => 5500,
   'portboot' => 5051,
-  'sn' => '10.1.6.74:5555',
+  'sn' => '10.1.5.148:5555',
   'app' => 'app.apk',
   'appPackage' => 'com.testdevlab.notifyus'
 
 }
 server = Server.new(options)
-server.reinstall_app
+# server.reinstall_app
 server.start
 # p `nmap -p 5551 localhost`
-sleep(5) # TODO replace with server up validaton
+sleep(10) # TODO replace with server up validaton
 # TODO move desired caps to config file
 desired_capabilities = {
   'deviceName' => options['sn'],
   'platformName' => 'Android',
   'appActivity' => 'com.testdevlab.notifyus.activities.MainActivity',
   'appPackage' => options['appPackage'],
-  'noReset' => 'True',
-  'app' => options['app']
+  'noReset' => 'True'
+  # 'app' => options['app']
 }
 # TODO get rid of global $driver variable
 $driver = Appium::Driver.new(caps: desired_capabilities, appium_lib: { server_url: "http://localhost:#{options['port']}/wd/hub" })

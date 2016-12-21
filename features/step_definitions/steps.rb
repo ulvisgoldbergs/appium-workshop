@@ -23,5 +23,5 @@
 
 
 Given /^I am on intro screen$/ do
- @screens.test_intro.visible?
+ @tests.test_intro.intro_visible?
 end
