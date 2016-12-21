@@ -2208,3 +2208,325 @@
 [debug] [MJSONWP] But deleting session, so not returning
 [debug] [MJSONWP] Responding to client with driver.deleteSession() result: null
 [HTTP] <-- DELETE /wd/hub/session/f2e9ded6-80f1-4691-a5f4-e9c743ef5417 200 2309 ms - 76 
+[Appium] Welcome to Appium v1.6.3 (REV 2bf8c12f61343871efbd3b8182482d9703cf840e)
+[Appium] Non-default server args:
+[Appium]   port: 5500
+[Appium]   bootstrapPort: 5051
+[Appium]   udid: '10.1.5.148:5555'
+[Appium] Deprecated server args:
+[Appium]   -U,--udid => --default-capabilities '{"udid":"10.1.5.148:5555"}'
+[Appium] Default capabilities, which will be added to each request unless overridden by desired capabilities:
+[Appium]   udid: '10.1.5.148:5555'
+[Appium] Appium REST http interface listener started on 0.0.0.0:5500
+[HTTP] --> POST /wd/hub/session {"desiredCapabilities":{"deviceName":"10.1.5.148:5555","platformName":"Android","appActivity":"com.testdevlab.notifyus.activities.MainActivity","appPackage":"com.testdevlab.notifyus","noReset":"True"}}
+[debug] [MJSONWP] Calling AppiumDriver.createSession() with args: [{"deviceName":"10.1.5.148:5555","platformName":"Android","appActivity":"com.testdevlab.notifyus.activities.MainActivity","appPackage":"com.testdevlab.notifyus","noReset":"True"},null,null,null,null]
+[Appium] Creating new AndroidDriver session
+[Appium] Capabilities:
+[Appium]   deviceName: '10.1.5.148:5555'
+[Appium]   platformName: 'Android'
+[Appium]   appActivity: 'com.testdevlab.notifyus.activities.MainActivity'
+[Appium]   appPackage: 'com.testdevlab.notifyus'
+[Appium]   noReset: 'True'
+[Appium]   udid: '10.1.5.148:5555'
+[debug] [AndroidDriver] AndroidDriver version: 1.10.38
+[BaseDriver] Capability 'noReset' changed from string to boolean. This may cause unexpected behavior
+[BaseDriver] Session created with session id: f7453aa2-8f11-4ab6-b32c-de6e125ff3cc
+[debug] [AndroidDriver] Getting Java version
+[AndroidDriver] Java version is: 1.8.0_111
+[ADB] Checking whether adb is present
+[ADB] Using adb from /home/user/Android/Sdk/platform-tools/adb
+[AndroidDriver] Retrieving device list
+[debug] [ADB] Trying to find a connected android device
+[debug] [ADB] Getting connected devices...
+[debug] [ADB] 1 device(s) connected
+[AndroidDriver] Using device: 10.1.5.148:5555
+[ADB] Checking whether adb is present
+[ADB] Using adb from /home/user/Android/Sdk/platform-tools/adb
+[debug] [ADB] Setting device id to 10.1.5.148:5555
+[AndroidDriver] App file was not listed, instead we're going to run com.testdevlab.notifyus directly on the device
+[debug] [AndroidDriver] Checking whether package is present on the device
+[debug] [ADB] Getting connected devices...
+[debug] [ADB] 1 device(s) connected
+[debug] [ADB] Running '/home/user/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","10.1.5.148:5555","shell","pm","list","packages","com.testdevlab.notifyus"]
+[AndroidDriver] Starting Android session
+[debug] [ADB] Running '/home/user/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","10.1.5.148:5555","wait-for-device"]
+[debug] [ADB] Getting connected devices...
+[debug] [ADB] 1 device(s) connected
+[debug] [ADB] Running '/home/user/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","10.1.5.148:5555","shell","echo","ping"]
+[debug] [Logcat] Starting logcat capture
+[debug] [AndroidDriver] Pushing settings apk to device...
+[debug] [ADB] Running '/home/user/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","10.1.5.148:5555","install","/home/user/.linuxbrew/lib/node_modules/appium/node_modules/io.appium.settings/bin/settings_apk-debug.apk"]
+[debug] [AndroidDriver] Pushing unlock helper app to device...
+[debug] [ADB] Running '/home/user/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","10.1.5.148:5555","install","/home/user/.linuxbrew/lib/node_modules/appium/node_modules/appium-unlock/bin/unlock_apk-debug.apk"]
+[ADB] Getting device platform version
+[debug] [ADB] Getting connected devices...
+[debug] [ADB] 1 device(s) connected
+[debug] [ADB] Running '/home/user/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","10.1.5.148:5555","shell","getprop","ro.build.version.release"]
+[debug] [ADB] Getting connected devices...
+[debug] [ADB] 1 device(s) connected
+[debug] [ADB] Running '/home/user/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","10.1.5.148:5555","shell","dumpsys","window"]
+[AndroidDriver] Screen already unlocked, doing nothing
+[AndroidDriver] No app sent in, not parsing package/activity
+[debug] [AndroidDriver] No app capability. Assuming it is already on the device
+[debug] [AndroidBootstrap] Watching for bootstrap disconnect
+[debug] [ADB] Forwarding system: 5051 to device: 4724
+[debug] [ADB] Running '/home/user/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","10.1.5.148:5555","forward","tcp:5051","tcp:4724"]
+[debug] [UiAutomator] Starting UiAutomator
+[debug] [UiAutomator] Moving to state 'starting'
+[debug] [UiAutomator] Parsing uiautomator jar
+[debug] [UiAutomator] Found jar name: 'AppiumBootstrap.jar'
+[debug] [ADB] Running '/home/user/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","10.1.5.148:5555","push","/home/user/.linuxbrew/lib/node_modules/appium/node_modules/appium-android-bootstrap/bootstrap/bin/AppiumBootstrap.jar","/data/local/tmp/"]
+[debug] [ADB] Attempting to kill all uiautomator processes
+[debug] [ADB] Getting all processes with uiautomator
+[debug] [ADB] Getting connected devices...
+[debug] [ADB] 1 device(s) connected
+[debug] [ADB] Running '/home/user/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","10.1.5.148:5555","shell","ps"]
+[ADB] No uiautomator process found to kill, continuing...
+[debug] [UiAutomator] Starting UIAutomator
+[debug] [ADB] Creating ADB subprocess with args: ["-P",5037,"-s","10.1.5.148:5555","shell","uiautomator","runtest","AppiumBootstrap.jar","-c","io.appium.android.bootstrap.Bootstrap","-e","pkg","com.testdevlab.notifyus","-e","disableAndroidWatchers",false,"-e","acceptSslCerts",false]
+[debug] [UiAutomator] Moving to state 'online'
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] json loading complete.
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Registered crash watchers.
+[AndroidBootstrap] Android bootstrap socket is now connected
+[debug] [ADB] Getting connected devices...
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Client connected
+[debug] [ADB] 1 device(s) connected
+[debug] [ADB] Running '/home/user/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","10.1.5.148:5555","shell","getprop","ro.build.version.sdk"]
+[debug] [ADB] Device API level: 21
+[debug] [ADB] Getting connected devices...
+[debug] [ADB] 1 device(s) connected
+[debug] [ADB] Running '/home/user/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","10.1.5.148:5555","shell","am","start","-W","-n","com.testdevlab.notifyus/com.testdevlab.notifyus.activities.MainActivity","-S","-a","android.intent.action.MAIN","-c","android.intent.category.LAUNCHER","-f","0x10200000"]
+[Appium] New AndroidDriver session created successfully, session f7453aa2-8f11-4ab6-b32c-de6e125ff3cc added to master session list
+[debug] [MJSONWP] Responding to client with driver.createSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"deviceName":"10.1.5.148:5555","platformName":"Android","appActivity":"com.testdevlab.notifyus.activities.MainActivity","appPackage":"com.testdevlab.notifyus","noReset":true,"udid":"10.1.5.148:5555"},"deviceName":"10.1.5.148:5555","platformName":"Android","appActivity":"com.testdevlab.notifyus.activities.MainActivity","appPackage":"com.testdevlab.notifyus","noReset":true,"udid":"10.1.5.148:5555","deviceUDID":"10.1.5.148:5555","platformVersion":"5.0.1"}
+[HTTP] <-- POST /wd/hub/session 200 8114 ms - 734 
+[HTTP] --> POST /wd/hub/session/f7453aa2-8f11-4ab6-b32c-de6e125ff3cc/timeouts/implicit_wait {"ms":30000}
+[debug] [MJSONWP] Calling AppiumDriver.implicitWait() with args: [30000,"f7453aa2-8f11-4ab6-b32c-de6e125ff3cc"]
+[debug] [BaseDriver] Set implicit wait to 30000ms
+[debug] [MJSONWP] Responding to client with driver.implicitWait() result: null
+[HTTP] <-- POST /wd/hub/session/f7453aa2-8f11-4ab6-b32c-de6e125ff3cc/timeouts/implicit_wait 200 35 ms - 76 
+[HTTP] --> POST /wd/hub/session/f7453aa2-8f11-4ab6-b32c-de6e125ff3cc/element {"using":"id","value":"content"}
+[debug] [MJSONWP] Calling AppiumDriver.findElement() with args: ["id","content","f7453aa2-8f11-4ab6-b32c-de6e125ff3cc"]
+[debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+[debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+[debug] [BaseDriver] Waiting up to 30000 ms for condition
+[debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"content","context":"","multiple":false}}
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"content","context":"","multiple":false}}
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'content' using 'ID' with the contextId: '' multiple: false
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.testdevlab.notifyus:id/content]
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=android:id/content]
+[debug] [AndroidBootstrap] Received command result from bootstrap
+[debug] [MJSONWP] Responding to client with driver.findElement() result: {"ELEMENT":"1"}
+[HTTP] <-- POST /wd/hub/session/f7453aa2-8f11-4ab6-b32c-de6e125ff3cc/element 200 1135 ms - 87 
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":{"ELEMENT":"1"}}
+[HTTP] --> DELETE /wd/hub/session/f7453aa2-8f11-4ab6-b32c-de6e125ff3cc {}
+[debug] [MJSONWP] Calling AppiumDriver.deleteSession() with args: ["f7453aa2-8f11-4ab6-b32c-de6e125ff3cc"]
+[debug] [AndroidDriver] Shutting down Android driver
+[debug] [ADB] Getting connected devices...
+[debug] [ADB] 1 device(s) connected
+[debug] [ADB] Running '/home/user/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","10.1.5.148:5555","shell","am","force-stop","com.testdevlab.notifyus"]
+[debug] [ADB] Pressing the HOME button
+[debug] [ADB] Getting connected devices...
+[debug] [ADB] 1 device(s) connected
+[debug] [ADB] Running '/home/user/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","10.1.5.148:5555","shell","input","keyevent",3]
+[debug] [AndroidBootstrap] Sending command to android: {"cmd":"shutdown"}
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"shutdown"}
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type SHUTDOWN
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":"OK, shutting down"}
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Closed client connection
+[debug] [AndroidBootstrap] [UIAUTO STDOUT] INSTRUMENTATION_STATUS: numtests=1
+[debug] [AndroidBootstrap] [UIAUTO STDOUT] INSTRUMENTATION_STATUS: stream=.
+[debug] [AndroidBootstrap] [UIAUTO STDOUT] INSTRUMENTATION_STATUS: id=UiAutomatorTestRunner
+[debug] [AndroidBootstrap] [UIAUTO STDOUT] INSTRUMENTATION_STATUS: test=testRunServer
+[debug] [AndroidBootstrap] [UIAUTO STDOUT] INSTRUMENTATION_STATUS: class=io.appium.android.bootstrap.Bootstrap
+[debug] [AndroidBootstrap] [UIAUTO STDOUT] INSTRUMENTATION_STATUS: current=1
+[debug] [AndroidBootstrap] [UIAUTO STDOUT] INSTRUMENTATION_STATUS_CODE: 0
+[debug] [AndroidBootstrap] [UIAUTO STDOUT] INSTRUMENTATION_STATUS: stream=
+[debug] [AndroidBootstrap] [UIAUTO STDOUT] Test results for WatcherResultPrinter=.
+[debug] [AndroidBootstrap] [UIAUTO STDOUT] Time: 5.651
+[debug] [AndroidBootstrap] [UIAUTO STDOUT] OK (1 test)
+[debug] [AndroidBootstrap] [UIAUTO STDOUT] INSTRUMENTATION_STATUS_CODE: -1
+[debug] [AndroidBootstrap] Received command result from bootstrap
+[debug] [UiAutomator] Shutting down UiAutomator
+[debug] [UiAutomator] Moving to state 'stopping'
+[debug] [UiAutomator] UiAutomator shut down normally
+[debug] [UiAutomator] Moving to state 'stopped'
+[debug] [ADB] Attempting to kill all uiautomator processes
+[debug] [ADB] Getting all processes with uiautomator
+[debug] [ADB] Getting connected devices...
+[debug] [ADB] 1 device(s) connected
+[debug] [ADB] Running '/home/user/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","10.1.5.148:5555","shell","ps"]
+[ADB] No uiautomator process found to kill, continuing...
+[debug] [UiAutomator] Moving to state 'stopped'
+[debug] [ADB] Getting connected devices...
+[debug] [ADB] 1 device(s) connected
+[debug] [ADB] Running '/home/user/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","10.1.5.148:5555","shell","am","force-stop","io.appium.unlock"]
+[debug] [Logcat] Stopping logcat capture
+[debug] [AndroidDriver] Not cleaning generated files. Add `clearSystemFiles` capability if wanted.
+[Appium] Removing session f7453aa2-8f11-4ab6-b32c-de6e125ff3cc from our master session list
+[debug] [MJSONWP] Received response: null
+[debug] [MJSONWP] But deleting session, so not returning
+[debug] [MJSONWP] Responding to client with driver.deleteSession() result: null
+[HTTP] <-- DELETE /wd/hub/session/f7453aa2-8f11-4ab6-b32c-de6e125ff3cc 200 2395 ms - 76 
+[Appium] Welcome to Appium v1.6.3 (REV 2bf8c12f61343871efbd3b8182482d9703cf840e)
+[Appium] Non-default server args:
+[Appium]   port: 5500
+[Appium]   bootstrapPort: 5051
+[Appium]   udid: '10.1.5.148:5555'
+[Appium] Deprecated server args:
+[Appium]   -U,--udid => --default-capabilities '{"udid":"10.1.5.148:5555"}'
+[Appium] Default capabilities, which will be added to each request unless overridden by desired capabilities:
+[Appium]   udid: '10.1.5.148:5555'
+[Appium] Appium REST http interface listener started on 0.0.0.0:5500
+[HTTP] --> POST /wd/hub/session {"desiredCapabilities":{"deviceName":"10.1.5.148:5555","platformName":"Android","appActivity":"com.testdevlab.notifyus.activities.MainActivity","appPackage":"com.testdevlab.notifyus","noReset":"True"}}
+[debug] [MJSONWP] Calling AppiumDriver.createSession() with args: [{"deviceName":"10.1.5.148:5555","platformName":"Android","appActivity":"com.testdevlab.notifyus.activities.MainActivity","appPackage":"com.testdevlab.notifyus","noReset":"True"},null,null,null,null]
+[Appium] Creating new AndroidDriver session
+[Appium] Capabilities:
+[Appium]   deviceName: '10.1.5.148:5555'
+[Appium]   platformName: 'Android'
+[Appium]   appActivity: 'com.testdevlab.notifyus.activities.MainActivity'
+[Appium]   appPackage: 'com.testdevlab.notifyus'
+[Appium]   noReset: 'True'
+[Appium]   udid: '10.1.5.148:5555'
+[debug] [AndroidDriver] AndroidDriver version: 1.10.38
+[BaseDriver] Capability 'noReset' changed from string to boolean. This may cause unexpected behavior
+[BaseDriver] Session created with session id: eefc6d2a-6af0-4792-965e-144bec20b62e
+[debug] [AndroidDriver] Getting Java version
+[AndroidDriver] Java version is: 1.8.0_111
+[ADB] Checking whether adb is present
+[ADB] Using adb from /home/user/Android/Sdk/platform-tools/adb
+[AndroidDriver] Retrieving device list
+[debug] [ADB] Trying to find a connected android device
+[debug] [ADB] Getting connected devices...
+[debug] [ADB] 1 device(s) connected
+[AndroidDriver] Using device: 10.1.5.148:5555
+[ADB] Checking whether adb is present
+[ADB] Using adb from /home/user/Android/Sdk/platform-tools/adb
+[debug] [ADB] Setting device id to 10.1.5.148:5555
+[AndroidDriver] App file was not listed, instead we're going to run com.testdevlab.notifyus directly on the device
+[debug] [AndroidDriver] Checking whether package is present on the device
+[debug] [ADB] Getting connected devices...
+[debug] [ADB] 1 device(s) connected
+[debug] [ADB] Running '/home/user/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","10.1.5.148:5555","shell","pm","list","packages","com.testdevlab.notifyus"]
+[AndroidDriver] Starting Android session
+[debug] [ADB] Running '/home/user/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","10.1.5.148:5555","wait-for-device"]
+[debug] [ADB] Getting connected devices...
+[debug] [ADB] 1 device(s) connected
+[debug] [ADB] Running '/home/user/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","10.1.5.148:5555","shell","echo","ping"]
+[debug] [Logcat] Starting logcat capture
+[debug] [AndroidDriver] Pushing settings apk to device...
+[debug] [ADB] Running '/home/user/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","10.1.5.148:5555","install","/home/user/.linuxbrew/lib/node_modules/appium/node_modules/io.appium.settings/bin/settings_apk-debug.apk"]
+[debug] [AndroidDriver] Pushing unlock helper app to device...
+[debug] [ADB] Running '/home/user/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","10.1.5.148:5555","install","/home/user/.linuxbrew/lib/node_modules/appium/node_modules/appium-unlock/bin/unlock_apk-debug.apk"]
+[ADB] Getting device platform version
+[debug] [ADB] Getting connected devices...
+[debug] [ADB] 1 device(s) connected
+[debug] [ADB] Running '/home/user/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","10.1.5.148:5555","shell","getprop","ro.build.version.release"]
+[debug] [ADB] Getting connected devices...
+[debug] [ADB] 1 device(s) connected
+[debug] [ADB] Running '/home/user/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","10.1.5.148:5555","shell","dumpsys","window"]
+[AndroidDriver] Screen already unlocked, doing nothing
+[AndroidDriver] No app sent in, not parsing package/activity
+[debug] [AndroidDriver] No app capability. Assuming it is already on the device
+[debug] [AndroidBootstrap] Watching for bootstrap disconnect
+[debug] [ADB] Forwarding system: 5051 to device: 4724
+[debug] [ADB] Running '/home/user/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","10.1.5.148:5555","forward","tcp:5051","tcp:4724"]
+[debug] [UiAutomator] Starting UiAutomator
+[debug] [UiAutomator] Moving to state 'starting'
+[debug] [UiAutomator] Parsing uiautomator jar
+[debug] [UiAutomator] Found jar name: 'AppiumBootstrap.jar'
+[debug] [ADB] Running '/home/user/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","10.1.5.148:5555","push","/home/user/.linuxbrew/lib/node_modules/appium/node_modules/appium-android-bootstrap/bootstrap/bin/AppiumBootstrap.jar","/data/local/tmp/"]
+[debug] [ADB] Attempting to kill all uiautomator processes
+[debug] [ADB] Getting all processes with uiautomator
+[debug] [ADB] Getting connected devices...
+[debug] [ADB] 1 device(s) connected
+[debug] [ADB] Running '/home/user/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","10.1.5.148:5555","shell","ps"]
+[ADB] No uiautomator process found to kill, continuing...
+[debug] [UiAutomator] Starting UIAutomator
+[debug] [ADB] Creating ADB subprocess with args: ["-P",5037,"-s","10.1.5.148:5555","shell","uiautomator","runtest","AppiumBootstrap.jar","-c","io.appium.android.bootstrap.Bootstrap","-e","pkg","com.testdevlab.notifyus","-e","disableAndroidWatchers",false,"-e","acceptSslCerts",false]
+[debug] [UiAutomator] Moving to state 'online'
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] json loading complete.
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Registered crash watchers.
+[AndroidBootstrap] Android bootstrap socket is now connected
+[debug] [ADB] Getting connected devices...
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Client connected
+[debug] [ADB] 1 device(s) connected
+[debug] [ADB] Running '/home/user/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","10.1.5.148:5555","shell","getprop","ro.build.version.sdk"]
+[debug] [ADB] Device API level: 21
+[debug] [ADB] Getting connected devices...
+[debug] [ADB] 1 device(s) connected
+[debug] [ADB] Running '/home/user/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","10.1.5.148:5555","shell","am","start","-W","-n","com.testdevlab.notifyus/com.testdevlab.notifyus.activities.MainActivity","-S","-a","android.intent.action.MAIN","-c","android.intent.category.LAUNCHER","-f","0x10200000"]
+[Appium] New AndroidDriver session created successfully, session eefc6d2a-6af0-4792-965e-144bec20b62e added to master session list
+[debug] [MJSONWP] Responding to client with driver.createSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"deviceName":"10.1.5.148:5555","platformName":"Android","appActivity":"com.testdevlab.notifyus.activities.MainActivity","appPackage":"com.testdevlab.notifyus","noReset":true,"udid":"10.1.5.148:5555"},"deviceName":"10.1.5.148:5555","platformName":"Android","appActivity":"com.testdevlab.notifyus.activities.MainActivity","appPackage":"com.testdevlab.notifyus","noReset":true,"udid":"10.1.5.148:5555","deviceUDID":"10.1.5.148:5555","platformVersion":"5.0.1"}
+[HTTP] <-- POST /wd/hub/session 200 8115 ms - 734 
+[HTTP] --> POST /wd/hub/session/eefc6d2a-6af0-4792-965e-144bec20b62e/timeouts/implicit_wait {"ms":30000}
+[debug] [MJSONWP] Calling AppiumDriver.implicitWait() with args: [30000,"eefc6d2a-6af0-4792-965e-144bec20b62e"]
+[debug] [BaseDriver] Set implicit wait to 30000ms
+[debug] [MJSONWP] Responding to client with driver.implicitWait() result: null
+[HTTP] <-- POST /wd/hub/session/eefc6d2a-6af0-4792-965e-144bec20b62e/timeouts/implicit_wait 200 26 ms - 76 
+[HTTP] --> POST /wd/hub/session/eefc6d2a-6af0-4792-965e-144bec20b62e/element {"using":"id","value":"content"}
+[debug] [MJSONWP] Calling AppiumDriver.findElement() with args: ["id","content","eefc6d2a-6af0-4792-965e-144bec20b62e"]
+[debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+[debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+[debug] [BaseDriver] Waiting up to 30000 ms for condition
+[debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"content","context":"","multiple":false}}
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"content","context":"","multiple":false}}
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding 'content' using 'ID' with the contextId: '' multiple: false
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.testdevlab.notifyus:id/content]
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=android:id/content]
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":{"ELEMENT":"1"}}
+[debug] [AndroidBootstrap] Received command result from bootstrap
+[debug] [MJSONWP] Responding to client with driver.findElement() result: {"ELEMENT":"1"}
+[HTTP] <-- POST /wd/hub/session/eefc6d2a-6af0-4792-965e-144bec20b62e/element 200 160 ms - 87 
+[HTTP] --> DELETE /wd/hub/session/eefc6d2a-6af0-4792-965e-144bec20b62e {}
+[debug] [MJSONWP] Calling AppiumDriver.deleteSession() with args: ["eefc6d2a-6af0-4792-965e-144bec20b62e"]
+[debug] [AndroidDriver] Shutting down Android driver
+[debug] [ADB] Getting connected devices...
+[debug] [ADB] 1 device(s) connected
+[debug] [ADB] Running '/home/user/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","10.1.5.148:5555","shell","am","force-stop","com.testdevlab.notifyus"]
+[debug] [ADB] Pressing the HOME button
+[debug] [ADB] Getting connected devices...
+[debug] [ADB] 1 device(s) connected
+[debug] [ADB] Running '/home/user/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","10.1.5.148:5555","shell","input","keyevent",3]
+[debug] [AndroidBootstrap] Sending command to android: {"cmd":"shutdown"}
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"shutdown"}
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type SHUTDOWN
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":"OK, shutting down"}
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Closed client connection
+[debug] [AndroidBootstrap] [UIAUTO STDOUT] INSTRUMENTATION_STATUS: numtests=1
+[debug] [AndroidBootstrap] [UIAUTO STDOUT] INSTRUMENTATION_STATUS: stream=.
+[debug] [AndroidBootstrap] [UIAUTO STDOUT] INSTRUMENTATION_STATUS: id=UiAutomatorTestRunner
+[debug] [AndroidBootstrap] [UIAUTO STDOUT] INSTRUMENTATION_STATUS: test=testRunServer
+[debug] [AndroidBootstrap] [UIAUTO STDOUT] INSTRUMENTATION_STATUS: class=io.appium.android.bootstrap.Bootstrap
+[debug] [AndroidBootstrap] [UIAUTO STDOUT] INSTRUMENTATION_STATUS: current=1
+[debug] [AndroidBootstrap] [UIAUTO STDOUT] INSTRUMENTATION_STATUS_CODE: 0
+[debug] [AndroidBootstrap] [UIAUTO STDOUT] INSTRUMENTATION_STATUS: stream=
+[debug] [AndroidBootstrap] [UIAUTO STDOUT] Test results for WatcherResultPrinter=.
+[debug] [AndroidBootstrap] [UIAUTO STDOUT] Time: 4.992
+[debug] [AndroidBootstrap] [UIAUTO STDOUT] OK (1 test)
+[debug] [AndroidBootstrap] [UIAUTO STDOUT] INSTRUMENTATION_STATUS_CODE: -1
+[debug] [AndroidBootstrap] Received command result from bootstrap
+[debug] [UiAutomator] Shutting down UiAutomator
+[debug] [UiAutomator] Moving to state 'stopping'
+[debug] [UiAutomator] UiAutomator shut down normally
+[debug] [UiAutomator] Moving to state 'stopped'
+[debug] [ADB] Attempting to kill all uiautomator processes
+[debug] [ADB] Getting all processes with uiautomator
+[debug] [ADB] Getting connected devices...
+[debug] [ADB] 1 device(s) connected
+[debug] [ADB] Running '/home/user/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","10.1.5.148:5555","shell","ps"]
+[ADB] No uiautomator process found to kill, continuing...
+[debug] [UiAutomator] Moving to state 'stopped'
+[debug] [ADB] Getting connected devices...
+[debug] [ADB] 1 device(s) connected
+[debug] [ADB] Running '/home/user/Android/Sdk/platform-tools/adb' with args: ["-P",5037,"-s","10.1.5.148:5555","shell","am","force-stop","io.appium.unlock"]
+[debug] [Logcat] Stopping logcat capture
+[debug] [AndroidDriver] Not cleaning generated files. Add `clearSystemFiles` capability if wanted.
+[Appium] Removing session eefc6d2a-6af0-4792-965e-144bec20b62e from our master session list
+[debug] [MJSONWP] Received response: null
+[debug] [MJSONWP] But deleting session, so not returning
+[debug] [MJSONWP] Responding to client with driver.deleteSession() result: null
+[HTTP] <-- DELETE /wd/hub/session/eefc6d2a-6af0-4792-965e-144bec20b62e 200 2700 ms - 76 

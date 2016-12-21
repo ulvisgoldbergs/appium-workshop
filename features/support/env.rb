@@ -24,7 +24,7 @@ options = {
 
 }
 server = Server.new(options)
-# server.reinstall_app
+server.reinstall_app
 server.start
 # p `nmap -p 5551 localhost`
 sleep(10) # TODO replace with server up validaton
