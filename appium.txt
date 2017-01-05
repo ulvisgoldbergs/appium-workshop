@@ -1,5 +1,5 @@
 [caps]
-deviceName = '0216026d49963d03'
+deviceName = '07af9c5249952578'
 platformName = 'Android'
 appActivity = 'com.testdevlab.notifyus.activities.MainActivity'
 appPackage = 'com.testdevlab.notifyus'
