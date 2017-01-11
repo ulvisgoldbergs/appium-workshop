@@ -23,5 +23,9 @@
 
 
 Given /^I am on intro screen$/ do
+<<<<<<< HEAD
  @screens.test_intro.visible?
+=======
+ @tests.test_intro.intro_visible?
+>>>>>>> 7d96f5a39ab340804a356c61cdfda954b8fae321
 end

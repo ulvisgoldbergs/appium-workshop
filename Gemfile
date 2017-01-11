@@ -1,7 +1,7 @@
 source 'https://www.rubygems.org'
 
 gem 'rubocop'
-gem 'appium_lib',         '~> 6.0.0'
+gem 'appium_lib',         '~> 9.1.3'
 gem 'rest-client',        '~> 1.6.7'
 gem 'rspec',              '~> 2.14.1'
 gem 'cucumber',           '~> 1.3.15'
