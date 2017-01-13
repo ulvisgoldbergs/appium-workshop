@@ -1,6 +1,5 @@
 Feature: 1. User feature
 
   Scenario: Signup
-    Given I am on welcome screen
-    When I signup
-    Then I am on status screen
+    Given I am on create filter screen
+    When I create empty property filter

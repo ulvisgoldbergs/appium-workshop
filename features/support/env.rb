@@ -34,9 +34,8 @@ desired_capabilities = {
   'platformName' => 'Android',
   'appActivity' => 'com.testdevlab.notifyus.activities.MainActivity',
   'appPackage' => options['appPackage'],
-  'noReset' => 'True',
-  'app' => options['app']
   'noReset' => 'True'
+  # 'app' => options['app']
   # 'app' => options['app']
 }
 # TODO get rid of global $driver variable
@@ -52,8 +51,4 @@ Before do
 end
 After do
   $driver.driver_quit
-end
-
-Before('@remove_favourites') do
-  @tests.test_ad.if_any_favourite_remove
 end
