@@ -36,6 +36,7 @@ desired_capabilities = {
   'appPackage' => options['appPackage'],
   'noReset' => 'True'
   # 'app' => options['app']
+  # 'app' => options['app']
 }
 # TODO get rid of global $driver variable
 $driver = Appium::Driver.new(caps: desired_capabilities, appium_lib: { server_url: "http://localhost:#{options['port']}/wd/hub" })
@@ -50,8 +51,4 @@ Before do
 end
 After do
   $driver.driver_quit
-end
-
-Before('@remove_favourites') do
-  @tests.test_ad.if_any_favourite_remove
 end
