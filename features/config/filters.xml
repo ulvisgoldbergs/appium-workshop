@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<property_positive>
+  <name>Filter 1</name>
+  <category>Nekustamie īpašumi</category>
+  <sub_categories>
+    <sub_category>
+      <title>Nekustamie īpašumi</title>
+      <option>Zeme</option>
+    </sub_category>
+    <sub_category>
+      <title>Zeme</title>
+      <option>Ventspils un rajons</option>
+    </sub_category>
+    <sub_category>
+      <title>Ventspils un rajons</title>
+      <option>Visi</option>
+    </sub_category>
+    <sub_category>
+      <title>Darbība</title>
+      <option>Visi</option>
+    </sub_category>
+  </sub_categories>
+  <parameters>
+    <parameter>
+      <name>CENA (EUR)</name>
+      <left>1</left>
+      <right>1000</right>
+    </parameter>
+    <parameter>
+      <name>PLATĪBA (M2)</name>
+      <left>1</left>
+      <right>3000</right>
+    </parameter>
+  </parameters>
+</property_positive>
