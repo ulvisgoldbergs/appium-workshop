@@ -18,5 +18,5 @@ class RunnerAndroid
   end
 end
 
-temp = RunnerAndroid.new('00bbb8a0ec4f9f25', {'apk' => 'apk', 'port' => '32432', 'boot_port' => '45533', 'tags' => '@tags', 'report' => 'report'})
+temp = RunnerAndroid.new('07af9c5249952578', {'apk' => 'apk', 'port' => '32432', 'boot_port' => '45533', 'tags' => '@tags', 'report' => 'report'})
 temp.run
