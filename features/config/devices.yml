@@ -1,0 +1,4 @@
+devices:
+  - '00bbb8a0ec4f9f25'
+port: 5500
+boot_port: 5600

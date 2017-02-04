@@ -3,23 +3,23 @@ property_positive:
   category: 'Nekustamie īpašumi'
   sub_categories:
     - sub_category:
-      - title: 'Nekustamie īpašumi'
-      - option: 'Zeme'
+      title: 'Nekustamie īpašumi'
+      option: 'Zeme'
     - sub_category:
-      - title: 'Zeme'
-      - option: 'Ventspils un rajons'
+      title: 'Zeme'
+      option: 'Ventspils un rajons'
     - sub_category:
-      - title: 'Ventspils un rajons'
-      - option: 'Visi'
+      title: 'Ventspils un rajons'
+      option: 'Visi'
     - sub_category:
-      - title: 'Darbība'
-      - option: 'Visi'
+      title: 'Darbība'
+      option: 'Visi'
   parameters:
     - parameter:
-      - name: 'CENA (EUR)'
-      - left: '1'
-      - right: '1000'
+      name: 'CENA (EUR)'
+      left: '1'
+      right: '1000'
     - parameter:
-      - name: 'PLATĪBA (M2)'
-      - left: '1'
-      - right: '3000'
+      name: 'PLATĪBA (M2)'
+      left: '1'
+      right: '3000'

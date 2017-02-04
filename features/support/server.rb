@@ -17,6 +17,8 @@ class Server
   end
 
   def uninstall_app
+    `adb -s #{@sn} uninstall io.appium.settings`
+    `adb -s #{@sn} uninstall io.appium.unlock`
     `adb -s #{@sn} uninstall #{@app_package}`
   end
 
