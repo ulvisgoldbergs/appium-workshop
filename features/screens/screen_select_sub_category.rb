@@ -5,6 +5,7 @@ class ScreenSelectSubCategory < ScreenBase
     @driver = driver
   end
 
+  #Fuknckija, kas parbauda vai mekleta apakskategorija eksiste
   def visible?(title)
     @driver.wait { @driver.text(title).displayed? }
     @driver.wait do
@@ -14,6 +15,7 @@ class ScreenSelectSubCategory < ScreenBase
     end
   end
 
+  # Funkcija, kas izvelas mekleto sub kategoriju
   def select_sub_category(sub_name)
     visible = false
     @driver.find_elements(
@@ -24,6 +26,7 @@ class ScreenSelectSubCategory < ScreenBase
       visible = true
       break
     end
-    @driver.scroll_to_exact(sub_name).click unless visible
+    #Scrolle ekranu lidz bridim, kad mekleta subkategorija tiek atrasta
+    @driver.scroll_to(sub_name).click unless visible
   end
 end

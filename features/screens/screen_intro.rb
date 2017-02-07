@@ -6,11 +6,13 @@ class ScreenIntro < ScreenBase
     @driver = driver
   end
 
+  #Parbauda vai konkrets elements atrodas Landing page
   def visible?
-    @driver.alert_accept
+    #@driver.alert_accept
     @driver.find_element(@base[:type], @base[:value])
   end
 
+  #Aizver Landing page nospiezot uz pogas "Uz Aplikaciju"
   def close_intro
     @driver.find_element(@button_to_app[:type], @button_to_app[:value]).click
   end
