@@ -6,7 +6,7 @@ class ParallelRunner
 
   def initialize
     all_devices
-    @config = YAML.load_file('../config/devices.yml')
+    @config = YAML.load_file('/home/automation/Automation/appium-workshop/features/config/devices.yml')
     @devices_connected = []
     test_devices
   end

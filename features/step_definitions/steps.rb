@@ -30,7 +30,26 @@ Given /^I have opened create filter screen$/ do
   @tests.test_intro.close_intro
 end
 
-
 Given /^I create property filter$/ do
  @tests.test_add_filter.create_filter
+end
+
+Given /^I create positive transport filter/ do
+  @tests.test_add_filter.choose_filter('transports_positive')
+end
+
+Given /^I create negative transport filter/ do
+  @tests.test_add_filter.choose_filter('transports_negative')
+end
+
+Given /^I create positive vacancy filter/ do
+  @tests.test_add_filter.choose_filter('vakances_positive')
+end
+
+Given /^I create negative vacancy filter/ do
+  @tests.test_add_filter.choose_filter('vakances_negative')
+end
+
+Given /^I create my first filter/ do
+  @tests.test_add_filter.choose_filter('property_positive')
 end
