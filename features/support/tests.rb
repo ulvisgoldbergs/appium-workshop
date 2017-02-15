@@ -10,6 +10,10 @@ class Tests
 
   def test_add_filter
     @test_add_filter ||= TestAddFilter.new(@screens)
-    @test_add_filter
   end
+
+  def test_filter_existance
+    @test_filter_existance ||= TestFilterExistance.new(@screens)
+  end
+
 end

@@ -15,15 +15,21 @@ class ScreenSelectSubCategory < ScreenBase
   end
 
   def select_sub_category(sub_name)
-    visible = false
-    @driver.find_elements(
-      @rows[:type], @rows[:value]
-    ).each do |row|
-      next unless row.text == sub_name
-      row.click
-      visible = true
-      break
+    found = false
+    retry_count = 0
+    while !found && retry_count < 30
+      retry_count += 1
+      @driver.find_elements(
+        @rows[:type], @rows[:value]
+      ).each do |item|
+        next unless item.text == sub_name
+        found = true
+        item.click
+        break
+      end
+      next if found
+      @driver.swipe(startx: 0, starty: 0,
+                    delta_x: 0, delta_y: 1, duration: 900)
     end
-    @driver.scroll_to_exact(sub_name).click unless visible
   end
 end

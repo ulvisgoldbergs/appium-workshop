@@ -7,7 +7,7 @@ class ScreenIntro < ScreenBase
   end
 
   def visible?
-    @driver.alert_accept
+    # @driver.alert_accept
     @driver.find_element(@base[:type], @base[:value])
   end
 

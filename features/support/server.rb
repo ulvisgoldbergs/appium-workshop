@@ -22,6 +22,10 @@ class Server
     `adb -s #{@sn} uninstall #{@app_package}`
   end
 
+  def clear_app
+    `adb -s #{@sn} shell pm clear #{@app_package}`
+  end
+
   def install_app
     `adb -s #{@sn} install #{@apk}`
   end

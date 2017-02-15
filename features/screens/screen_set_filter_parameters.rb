@@ -13,25 +13,24 @@ class ScreenSetFilterParameters < ScreenBase
   def visible?
     @driver.wait do
       @driver.find_element(
-        @parameter_holders[:type], @parameter_holders[:value]
+        @filter_name[:type], @filter_name[:value]
       ).displayed?
     end
   end
 
   def set_name(text_name)
-    @driver.find_element(
-      @filter_name[:type], @filter_name[:value]
-    ).send_keys(text_name)
+    enter_text(@filter_name, text_name)
   end
 
   def set_parameter(parameter_hash)
     @driver.find_elements(
       @parameter_holders[:type], @parameter_holders[:value]
     ).each do |param|
+      p 'each loop'
       next unless param.find_element(@parameter_name[:type], @parameter_name[:value]).text == parameter_hash['name']
       param.find_element(@from_value[:type], @from_value[:value]).send_keys(parameter_hash['left'])
       param.find_element(@till_value[:type], @till_value[:value]).send_keys(parameter_hash['right'])
-      @driver.press_keycode(4)
+      @driver.hide_keyboard
     end
 end
 
