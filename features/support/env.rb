@@ -14,12 +14,15 @@ require_relative '../screens/screen_base'
 class AppiumWorld
 end
 
-# TODO pass device option dynamicaly to allow simultaneous runs on different devices
+p ENV['port']
+p ENV['boot_port']
+p ENV['apk']
+p ENV['curdevice']
 options = {
-  'port' => 5500,
-  'portboot' => 5051,
-  'sn' => '00bbb8a0ec4f9f25',
-  'app' => 'app.apk',
+  'port' => ENV['port'],
+  'portboot' => ENV['boot_port'],
+  'sn' => ENV['curdevice'],
+  'app' => ENV['apk'],
   'appPackage' => 'com.testdevlab.notifyus'
 
 }
@@ -51,4 +54,8 @@ Before do
 end
 After do
   $driver.driver_quit
+end
+
+at_exit do
+  server.stop
 end

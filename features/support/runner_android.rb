@@ -12,9 +12,9 @@ class RunnerAndroid
     "export apk=#{@options['apk']} ; " \
     "export port=#{@options['port']} ; " \
     "export boot_port=#{@options['boot_port']} ; " \
-    "cucumber #{@options['tags']} -f --format #{@options['report']} " \
+    "cucumber #{@options['tags']} --format #{@options['report']} " \
     "-o reports/#{@device_name}.#{@options['report']}"
-    p command
+    `#{command}`
   end
 end
 
