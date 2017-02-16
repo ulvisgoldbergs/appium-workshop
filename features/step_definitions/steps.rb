@@ -6,18 +6,19 @@ Given /^I have opened create filter screen$/ do
   @tests.test_intro.close_intro
 end
 
-Given /^I create correct landline filter$/ do
-  @tests.test_add_filter.set_filter('property_positive')
+Given /^I create correct (.*?) filter$/ do |type|
+  filter_dict = {'landline' => 'property_positive'}
+  filter_dict['transport'] = 'transport_positive'
+  filter_dict['vacancy'] = 'vacancy_positive'
+  @tests.test_add_filter.set_filter(filter_dict[type])
   @tests.test_add_filter.create_filter
 end
 
-Given /^I create correct transport filter$/ do
-  @tests.test_add_filter.set_filter('transport_positive')
-  @tests.test_add_filter.create_filter
-end
-
-Given /^I create incorrect transport filter$/ do
-  @tests.test_add_filter.set_filter('transport_negative')
+Given /^I create incorrect (.*?) filter$/ do |type|
+  filter_dict = {'landline' => 'property_negative'}
+  filter_dict['transport'] = 'transport_negative'
+  filter_dict['vacancy'] = 'vacancy_negative'
+  @tests.test_add_filter.set_filter(filter_dict[type])
   @tests.test_add_filter.create_filter
 end
 
@@ -27,14 +28,4 @@ end
 
 Given /^I validate created filter$/ do
   @tests.test_filter_existance.check_filter_existance
-end
-
-Given /^I create correct vacancy filter$/ do
-  @tests.test_add_filter.set_filter('vacancy_positive')
-  @tests.test_add_filter.create_filter
-end
-
-Given /^I create incorrect vacancy filter$/ do
-  @tests.test_add_filter.set_filter('vacancy_negative')
-  @tests.test_add_filter.create_filter
 end
