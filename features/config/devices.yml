@@ -1,4 +1,5 @@
 devices:
   - 'LGK3505TZPHE99'
+  - '3204e457b1c791e9'
 port: 5500
 boot_port: 5600
