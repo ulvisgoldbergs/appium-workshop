@@ -1,8 +1,0 @@
-devices:
-  - 'LGK3505TZPHE99'
-  - '3204e457b1c791e9'
-  - '0133f2e9e2add266'
-  - '00bbb8a0ec4f9f25'
-  - '75HABKKGBHTT'
-port: 5500
-boot_port: 5600
