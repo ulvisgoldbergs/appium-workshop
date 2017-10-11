@@ -6,7 +6,6 @@
 
 require 'rspec/expectations'
 require 'appium_lib'
-# require 'cucumber/ast'
 require_relative 'server'
 
 # Create a custom World class so we don't pollute `Object` with Appium methods
