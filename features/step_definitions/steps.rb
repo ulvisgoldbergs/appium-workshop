@@ -22,15 +22,6 @@
 # https://www.relishapp.com/rspec/rspec-expectations/docs
 
 
-Given /^I am on intro screen$/ do
- @tests.test_intro.intro_visible?
-end
-
-Given /^I have opened create filter screen$/ do
-  @tests.test_intro.close_intro
-end
-
-
-Given /^I create property filter$/ do
- @tests.test_add_filter.create_filter
+Given /^I am on welcome screen$/ do
+ $driver.find_element(:id, 'content')
 end

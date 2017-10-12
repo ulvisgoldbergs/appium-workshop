@@ -1,5 +1,6 @@
 Feature: 1. Filter feature
 
-  Scenario: Add filter
-    Given I have opened create filter screen
-    When I create property filter
+Scenario: Signup
+    Given I am on welcome screen
+    When I signup
+    Then I am on status screen
