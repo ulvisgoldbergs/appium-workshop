@@ -6,25 +6,18 @@
 
 require 'rspec/expectations'
 require 'appium_lib'
-require 'cucumber/ast'
 require_relative 'server'
-require_relative '../screens/screen_base'
 
 # Create a custom World class so we don't pollute `Object` with Appium methods
 class AppiumWorld
 end
 
-p ENV['port']
-p ENV['boot_port']
-p ENV['apk']
-p ENV['curdevice']
 options = {
-  'port' => ENV['port'],
-  'portboot' => ENV['boot_port'],
-  'sn' => ENV['curdevice'],
-  'app' => ENV['apk'],
+  'port' => 5500,
+  'portboot' => 5051,
+  'sn' => 'QYJ7N17408006469',
+  'app' => 'app.apk',
   'appPackage' => 'com.testdevlab.notifyus'
-
 }
 server = Server.new(options)
 server.reinstall_app
@@ -49,8 +42,6 @@ end
 
 Before do
   $driver.start_driver
-  @screens = Screens.new $driver
-  @tests = Tests.new @screens
 end
 After do
   $driver.driver_quit
