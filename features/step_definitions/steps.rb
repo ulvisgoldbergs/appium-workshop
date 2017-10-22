@@ -23,5 +23,13 @@
 
 
 Given /^I am on welcome screen$/ do
- $driver.find_element(:id, 'content')
+  $driver.alert_accept
+  if $driver.find_elements(:id, 'close_intro').any?
+    $driver.find_element(:id, 'close_intro').click
+  end
+
+  if $driver.find_elements(:xpath, '//android.widget.Button[contains(@text, "OK")]').any?
+    $driver.alert_accept
+  end
+  sleep(4)
 end
