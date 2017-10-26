@@ -7,6 +7,7 @@
 require 'rspec/expectations'
 require 'appium_lib'
 require_relative 'server'
+require_relative '../pages/base_page'
 
 # Create a custom World class so we don't pollute `Object` with Appium methods
 class AppiumWorld
@@ -15,7 +16,7 @@ end
 options = {
   'port' => 5500,
   'portboot' => 5051,
-  'sn' => 'QYJ7N17408006469',
+  'sn' => 'BYJDU17511001133',
   'app' => 'app.apk',
   'appPackage' => 'com.testdevlab.notifyus'
 }
@@ -41,6 +42,7 @@ World do
 end
 
 Before do
+  @pages = Pages.new
   $driver.start_driver
 end
 After do

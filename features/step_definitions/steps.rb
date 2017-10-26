@@ -23,5 +23,5 @@
 
 
 Given /^I am on welcome screen$/ do
- $driver.find_element(:id, 'content')
+ @pages.page_intro.close_intro_if_visible
 end
