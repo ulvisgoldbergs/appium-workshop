@@ -4,7 +4,7 @@ class Element
   end
 
   def visible?
-    $driver.wait { @driver.find_element(@value[:type], @value[:value]).displayed? }
+    $driver.wait { $driver.find_element(@value[:type], @value[:value]).displayed? }
   end
 
   def any?
@@ -13,5 +13,9 @@ class Element
 
   def click
     $driver.find_element(@value[:type], @value[:value]).click
+  end
+
+  def click_by_text(text)
+    $driver.find_element(@value[:type], @value[:value]).find_element(:xpath, "//../*[contains(@text, #{text})]").click
   end
 end
