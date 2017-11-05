@@ -30,3 +30,7 @@ end
 Given /^I open on Transports category$/ do
     @pages.page_create_filter.open_category("Transports")
 end
+
+Given /^I open sub cat Vieglie auto/ do
+  @pages.page_sub_category.open_sub_category("Vieglie auto")
+end
