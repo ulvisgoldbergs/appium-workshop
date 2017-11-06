@@ -1,6 +1,6 @@
 Feature: 1. Filter feature
 
 Scenario: Signup
-    Given I am on welcome screen
-    When I signup
-    Then I am on status screen
+    Given I am on create filter page
+    When I open on Transports category
+    Then I open sub cat Vieglie auto
