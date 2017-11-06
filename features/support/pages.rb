@@ -4,6 +4,7 @@ class Pages
     @page_intro
   end
 
+
   def page_create_filter
     @page_create_filter ||= CreateFilterPage.new
     @page_create_filter
@@ -13,5 +14,6 @@ class Pages
     @page_sub_category ||= SubCategoryPage.new
     @page_sub_category
   end
+
 
 end
