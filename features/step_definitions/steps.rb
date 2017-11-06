@@ -22,9 +22,11 @@
 # https://www.relishapp.com/rspec/rspec-expectations/docs
 
 
+
 Given /^I am on create filter page$/ do
  @pages.page_intro.close_intro_if_visible
  @pages.page_create_filter.visible?
+
 end
 
 Given /^I open on Transports category$/ do

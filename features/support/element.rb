@@ -4,7 +4,9 @@ class Element
   end
 
   def visible?
+
     $driver.wait { $driver.find_element(@value[:type], @value[:value]).displayed? }
+
   end
 
   def any?
@@ -14,6 +16,7 @@ class Element
   def click
     $driver.find_element(@value[:type], @value[:value]).click
   end
+
 
   def click_by_text(text)
     # element = $driver.find_element(@value[:type], @value[:value])
@@ -27,5 +30,6 @@ class Element
   def scroll_to_exact(text)
     $driver.scroll_to_exact(text)
   end
+
 
 end
