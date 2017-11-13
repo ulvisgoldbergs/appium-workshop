@@ -1,7 +1,7 @@
 class CreateFilterPage < BasePage
   def initialize
     @title = Element.new(:xpath, '//android.widget.TextView[contains(@text, "Izveidot filtru")]')
-    @titles_category = Element.new(:id, 'main_row_background')
+    @titles_category = ElementGroup.new(:id, 'main_row_text')
   end
 
   def visible?

@@ -1,7 +1,7 @@
 class SubCategoryPage < BasePage
   def initialize
     @title = Element.new(:xpath, '//android.widget.TextView[contains(@text, "Transports")]')
-    @sub_cat = Element.new(:id, 'category_name')
+    @sub_cat = ElementGroup.new(:id, 'category_name')
   end
 
   def visible?

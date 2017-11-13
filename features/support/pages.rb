@@ -14,4 +14,8 @@ class Pages
     @page_sub_category
   end
 
+  def page_paremeters
+    @page_paremeters ||= ParametersPage.new
+    @page_paremeters
+  end
 end

@@ -27,10 +27,21 @@ Given /^I am on create filter page$/ do
  @pages.page_create_filter.visible?
 end
 
+
+Given /^I open sub cat (.*)$/ do |sub_cat|
+  @pages.page_sub_category.open_sub_category(sub_cat)
+end
+
 Given /^I open on Transports category$/ do
     @pages.page_create_filter.open_category("Transports")
 end
 
-Given /^I open sub cat Vieglie auto/ do
-  @pages.page_sub_category.open_sub_category("Vieglie auto")
+Given /^I am on parameters page$/ do
+  @pages.page_paremeters.visible?
+end
+
+Given /^I set filter parameters$/ do
+  @pages.page_paremeters.set_name("Test Name")
+  @pages.page_paremeters.set_parameter("GADS", "1999", "2002")
+  @pages.page_paremeters.save_filter
 end
