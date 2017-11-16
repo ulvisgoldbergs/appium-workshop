@@ -23,25 +23,14 @@
 
 
 Given /^I am on create filter page$/ do
- @pages.page_intro.close_intro_if_visible
- @pages.page_create_filter.visible?
+  @tests.filters_test.close_intro
 end
 
 
-Given /^I open sub cat (.*)$/ do |sub_cat|
-  @pages.page_sub_category.open_sub_category(sub_cat)
+Given /^I open filter params$/ do
+  @tests.filters_test.open_filter_params
 end
 
-Given /^I open on Transports category$/ do
-    @pages.page_create_filter.open_category("Transports")
-end
-
-Given /^I am on parameters page$/ do
-  @pages.page_paremeters.visible?
-end
-
-Given /^I set filter parameters$/ do
-  @pages.page_paremeters.set_name("Test Name")
-  @pages.page_paremeters.set_parameter("GADS", "1999", "2002")
-  @pages.page_paremeters.save_filter
+Given /^I submit filter/ do
+  @tests.filters_test.submit_filter
 end
