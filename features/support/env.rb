@@ -43,7 +43,8 @@ end
 
 Before do
   @pages = Pages.new
-  @tests = Tests.new @pages
+  $filters ||= Filters
+  @tests = Tests.new(@pages, $filters)
   $driver.start_driver
 end
 After do
