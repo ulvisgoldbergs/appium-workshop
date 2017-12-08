@@ -13,18 +13,21 @@ require_relative '../pages/base_page'
 class AppiumWorld
 end
 
+p ENV['port']
+p ENV['boot_port']
+p ENV['sn']
+p ENV['apk']
 options = {
-  'port' => 5500,
-  'portboot' => 5051,
-  'sn' => 'BYJDU17511001133',
-  'app' => 'app.apk',
+  'port' => ENV['port'],
+  'portboot' => ENV['boot_port'],
+  'sn' => ENV['sn'],
+  'app' => ENV['apk'],
   'appPackage' => 'com.testdevlab.notifyus'
 }
 server = Server.new(options)
 server.reinstall_app
 server.start
-# p `nmap -p 5551 localhost`
-sleep(10) # TODO replace with server up validaton
+server.wait_to_boot
 # TODO move desired caps to config file
 desired_capabilities = {
   'deviceName' => options['sn'],

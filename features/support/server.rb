@@ -20,6 +20,13 @@ class Server
     end
   end
 
+  def wait_to_boot
+    opened = false
+    until opened do
+      opened = `nmap -p #{@port} localhost | grep #{@port}`.include?('open')
+    end
+  end
+
   def uninstall_app
     `adb -s #{@sn} uninstall io.appium.settings`
     `adb -s #{@sn} uninstall io.appium.unlock`
