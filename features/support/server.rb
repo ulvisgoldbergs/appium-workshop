@@ -8,6 +8,7 @@ class Server
   end
 
   def start
+    p "Boot"
     stop
     `appium -p #{@port} -bp #{@port_boot} -U #{@sn} >> logs.log 2>&1 &`
   end
@@ -21,6 +22,7 @@ class Server
   end
 
   def wait_to_boot
+    p "wait"
     opened = false
     until opened do
       opened = `nmap -p #{@port} localhost | grep #{@port}`.include?('open')
@@ -28,12 +30,15 @@ class Server
   end
 
   def uninstall_app
+    p "uninstall"
+    p "adb -s #{@sn} uninstall io.appium.setting"
     `adb -s #{@sn} uninstall io.appium.settings`
     `adb -s #{@sn} uninstall io.appium.unlock`
     `adb -s #{@sn} uninstall #{@app_package}`
   end
 
   def install_app
+    p "install"
     `adb -s #{@sn} install #{@apk}`
   end
 
