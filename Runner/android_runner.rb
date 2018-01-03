@@ -10,7 +10,7 @@ class AndroidRunner
     "export port=#{@options['port']} ; " \
     "export apk=#{@options['apk']} ; " \
     "cucumber -f pretty -f #{@options['report']} " \
-    "-o reports/#{@options['device_name']}.#{@options['report']} ; echo 'run tests...'"
+    "-o reports/#{@options['device_name']}.#{@options['report']}"
 
     p command
     `#{command}`
